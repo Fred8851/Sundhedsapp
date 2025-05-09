@@ -6,13 +6,14 @@ export const user = pgTable('user', {
 	password: text('password').notNull()
 });
 
-export const diaryPost = pgTable('diary_post', {
+export const dataPost = pgTable('data_post', {
 	id: serial('id').primaryKey(),
-	title: text('title').notNull(),
-	content: text('content').notNull(),
+	value: integer('value').notNull(), // Gemmer værdien fra range-slideren
 	created_at: date('created_at').notNull().defaultNow(),
 	updated_at: date('updated_at'),
 	user_id: integer('user_id')
 		.notNull()
 		.references(() => user.id, { onDelete: 'cascade' }) // Cascade delete if user is deleted
 });
+
+// Reminder: Ensure migrations are generated and applied after modifying the schema.

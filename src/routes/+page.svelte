@@ -15,21 +15,13 @@
 		});
 		const data = await response.json();
 		if (response.ok) {
-			goto('/diary');
+			goto('/data');
 		} else {
 			alert('Login failed!');
 		}
 	};
 </script>
 
-<Title>Telemedicin 2025</Title>
+<Title>Bliver kloger på din krop</Title>
 
-<H1>Login</H1>
-<p class="mb-4">Log ind for at få adgang til din dagbog.</p>
-
-<input class="input mb-4 block" bind:value={username} type="text" placeholder="Indtast Email" />
-<input class="input mb-4 block" bind:value={password} type="password" placeholder="Indtast Password" />
-<button class="btn btn-primary mb-4" onclick={login}>Login</button>
-
-<p>Har du ikke en konto endnu?</p>
-<Link href="/signup">Opret ny konto</Link>
+<H1>Ved brug af denne applikation, kan du trak din smerte og se hvad dit gennemsnit niveau er.</H1>

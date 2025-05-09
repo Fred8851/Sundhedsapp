@@ -80,5 +80,5 @@
 </ul>
 
 <div class="mt-4">
-	<Link href="/diary">Tilbage til dagbog</Link>
+	<Link href="/data">Tilbage til dagbog</Link>
 </div>
